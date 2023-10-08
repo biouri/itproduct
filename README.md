@@ -121,3 +121,8 @@ https://pub.dev/packages/conduit_postgresql/install
 cd .\auth\
 dart pub get
 
+## Creating a migration file + Validation + Making changes to the DB
+conduit db generate
+conduit db validate
+conduit db upgrade
+
