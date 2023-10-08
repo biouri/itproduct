@@ -60,3 +60,64 @@ docker compose up --build
 Run in Terminal after build (in the background):
 docker compose up -d
 
+## Installing Flutter, Dart SDK, Conduit for writing a backend
+
+Windows - The package manager pre-install
+https://chocolatey.org/install
+
+Mac - Pre-install Homebrew
+https://brew.sh/
+
+### Dart Install
+https://dart.dev/get-dart
+
+The Dart SDK installation (Windows example):
+choco install dart-sdk
+
+To upgrade the Dart SDK (Windows example):
+choco upgrade dart-sdk
+
+### Flutter Install
+https://docs.flutter.dev/get-started/install
+
+Check Dart & Flutter Version
+dart --version
+flutter --version
+where flutter dart
+
+### Framework Conduit Install
+https://www.theconduit.dev/
+
+Get Started
+https://www.theconduit.dev/start/
+
+dart pub global activate conduit
+conduit --version
+Conduit CLI version: 4.4.0
+
+### Create a new Dart project.
+https://dart.dev/tutorials/server/get-started#3-create-a-small-app
+
+dart create -t console auth
+
+Set Application entry point
+lib\main.dart
+
+Add dependencies to: 
+auth\pubspec.yaml
+...
+dependencies:
+  conduit: ^4.4.0
+  conduit_core: ^4.4.0
+  conduit_postgresql: ^4.4.0
+
+From:
+https://pub.dev/packages/conduit/install
+https://pub.dev/packages/conduit_core/install
+https://pub.dev/packages/conduit_postgresql/install
+
+
+### Getting packages
+cd .\auth\
+dart pub get
+
